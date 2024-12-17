@@ -14,9 +14,9 @@
    <children>
       <HBox prefHeight="60.0" prefWidth="800.0">
          <children>
-            <VBox prefHeight="59.0" prefWidth="700.0">
+            <VBox prefHeight="55.0" prefWidth="662.0">
                <children>
-                  <TextField alignment="CENTER" prefHeight="34.0" prefWidth="708.0" promptText="fvfg" styleClass="bottom" stylesheets="@style.css" text="search">
+                  <TextField alignment="CENTER" prefHeight="34.0" prefWidth="574.0" promptText="fvfg" styleClass="bottom" stylesheets="@style.css" text="City">
                      <font>
                         <Font name="Arial" size="18.0" />
                      </font>
@@ -28,7 +28,16 @@
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="86.0" styleClass="bottom" stylesheets="@style.css" text="Setting" textAlignment="CENTER">
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="86.0" styleClass="bottom" stylesheets="@style.css" text="search" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="85.0" styleClass="bottom" text="Setting">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
