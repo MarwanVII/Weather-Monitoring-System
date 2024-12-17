@@ -1,0 +1,17 @@
+.bottom{
+    -fx-background-radius:50;
+}
+
+.backgroundColor{
+    -fx-background-color: linear-gradient(#3ba5e7,#80d5f1)
+}
+
+.card {
+    -fx-background-color: #ccffff;
+    -fx-background-radius:25;
+}
+
+.cardText{
+    -fx-background-color: #a6e6e6;
+    -fx-background-radius:25;
+}
