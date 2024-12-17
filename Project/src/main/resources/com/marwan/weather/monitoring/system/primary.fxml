@@ -1,16 +1,506 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marwan.weather.monitoring.system.PrimaryController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="868.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <HBox prefHeight="60.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="59.0" prefWidth="700.0">
+               <children>
+                  <TextField alignment="CENTER" prefHeight="34.0" prefWidth="708.0" promptText="fvfg" styleClass="bottom" stylesheets="@style.css" text="search">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="86.0" styleClass="bottom" stylesheets="@style.css" text="Setting" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="292.0" prefWidth="779.0" stylesheets="@style.css">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="266.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="266.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="282.0" text="EGYPT">
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                           <padding>
+                              <Insets right="15.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="130.0">
+                     <children>
+                        <ImageView fitHeight="192.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-summer-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="266.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="82.0" prefWidth="268.0" text="28'C">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="176.0" prefHeight="40.0" prefWidth="266.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="41.0" prefWidth="275.0" text="17 December 2024">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="279.0" prefWidth="320.0" />
+            <VBox layoutX="110.0" layoutY="10.0" prefHeight="279.0" prefWidth="274.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" styleClass="card">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="80.0">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-hygrometer-80.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="179.0">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="179.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="50.0" prefWidth="179.0" text="humidity">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="179.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="57.0" prefWidth="176.0" text="50%">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" styleClass="card">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="80.0">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-wind-80.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="179.0">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="179.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="50.0" prefWidth="179.0" text="wind speed">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="179.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="57.0" prefWidth="176.0" text="1.4Km/h">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" styleClass="card">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="80.0">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-heavy-rain-80.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="179.0">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="179.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="50.0" prefWidth="179.0" text="chance of rain">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="179.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="57.0" prefWidth="176.0" text="15%">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="162.0" prefWidth="779.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Sunday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-summer-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Saturday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-cloud-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="121.0" layoutY="10.0" prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Friday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-summer-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="232.0" layoutY="10.0" prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Thursday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-cloud-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="344.0" layoutY="10.0" prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Wednesday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-rainfall-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="455.0" layoutY="10.0" prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Tuesday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-winter-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="566.0" layoutY="10.0" prefHeight="200.0" prefWidth="111.0" styleClass="card">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="92.0" text="Monday">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="60.0" prefWidth="92.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/icons8-summer-80.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="41.0" prefHeight="26.0" prefWidth="92.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="102.0" text="10/7.5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
 </VBox>
