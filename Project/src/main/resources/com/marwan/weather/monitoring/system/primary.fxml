@@ -37,7 +37,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="85.0" styleClass="bottom" text="Setting">
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="86.0" styleClass="bottom" text="Setting">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
