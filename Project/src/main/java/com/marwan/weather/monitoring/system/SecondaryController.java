@@ -16,6 +16,11 @@ public class SecondaryController implements Initializable {
 
     @FXML
     private void switchToPrimary() throws IOException {
+        
+        UserPreferencesManager preferences = UserPreferencesManager.getInstance();
+        preferences.setTemperatureUnit(tempList.getValue());
+        preferences.setWindSpeedUnit(windList.getValue());
+        
         App.setRoot("primary");
     }
 
@@ -25,6 +30,10 @@ public class SecondaryController implements Initializable {
       String [] WindSpeedMeasurmentUnit = {"Km\\h" , "M\\h"};
       tempList.getItems().addAll(TemperatureMeasurmentUnit);
       windList.getItems().addAll(WindSpeedMeasurmentUnit);
+      
+      UserPreferencesManager preferences = UserPreferencesManager.getInstance();
+        tempList.setValue(preferences.getTemperatureUnit());
+        windList.setValue(preferences.getWindSpeedUnit());
 
     }
 

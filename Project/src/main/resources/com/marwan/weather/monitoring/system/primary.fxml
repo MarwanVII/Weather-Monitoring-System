@@ -76,9 +76,9 @@
                   </HBox>
                   <HBox prefHeight="80.0" prefWidth="266.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="82.0" prefWidth="268.0" text="28'C">
+                        <Label fx:id="temperatureLabel" alignment="CENTER" prefHeight="82.0" prefWidth="268.0" text="28'C">
                            <font>
-                              <Font name="System Bold" size="48.0" />
+                              <Font name="System Bold" size="40.0" />
                            </font>
                         </Label>
                      </children>
@@ -174,9 +174,9 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="179.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="57.0" prefWidth="176.0" text="1.4Km/h">
+                                    <Label fx:id="windSpeedLabel" alignment="CENTER" prefHeight="33.0" prefWidth="181.0" text="1.4Km/h">
                                        <font>
-                                          <Font name="System Bold" size="16.0" />
+                                          <Font name="System Bold" size="14.0" />
                                        </font>
                                     </Label>
                                  </children>
