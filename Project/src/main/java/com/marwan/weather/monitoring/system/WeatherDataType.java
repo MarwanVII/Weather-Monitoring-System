@@ -11,5 +11,5 @@ package com.marwan.weather.monitoring.system;
 
 // Interface for weather data types
 public interface WeatherDataType {
-        void display();
+        double getValue();
 }

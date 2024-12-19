@@ -33,7 +33,7 @@ public class WeatherDataFetcher {
             
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            if (response.statusCode() == 200) {
+            if (response.statusCode() == 200){
                 // Parse the response JSON
                 JSONObject weatherData = new JSONObject(response.body());
                 
@@ -48,9 +48,9 @@ public class WeatherDataFetcher {
                 WeatherDataType humid = WeatherDataFactory.createWeatherData("humidity", humidity);
 
                 // Display the data
-                temperature.display();
-                wind.display();
-                humid.display();
+//                temperature.display();
+//                wind.display();
+//                humid.display();
             } else {
                 System.out.println("Failed to fetch weather data: " + response.statusCode());
             }
