@@ -11,6 +11,9 @@ public class PrimaryController {
 
     @FXML
     private Label windSpeedLabel;
+    
+    @FXML
+    private Label weatherAlertLabel;
 
     @FXML
     private void switchToSecondary() throws IOException {
@@ -19,11 +22,11 @@ public class PrimaryController {
     
     @FXML
     public void initialize() {
-        // Get user preferences
         UserPreferencesManager preferences = UserPreferencesManager.getInstance();
-
-        // Display preferences on the primary page
         temperatureLabel.setText(preferences.getTemperatureUnit());
         windSpeedLabel.setText(preferences.getWindSpeedUnit());
+        
+        WeatherAlert alert = WeatherAlertFactory.createAlert("storm");
+        weatherAlertLabel.setText(alert.generateAlertMessage());
     }
 }
