@@ -17,12 +17,6 @@ public class SecondaryController implements Initializable {
     private ComboBox<String> windList;
 
     @FXML
-    void setTemp(ActionEvent event) {
-
-    }
-
-
-    @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("primary");
     }
@@ -37,3 +31,4 @@ public class SecondaryController implements Initializable {
     }
 
 }
+
