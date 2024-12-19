@@ -16,8 +16,10 @@ package com.marwan.weather.monitoring.system;
             this.value = value;
         }
 
-        @Override
-        public void display() {
-            System.out.println("Humidity: " + value + "%");
-        }
+    @Override
+    public double getValue() {
+        return value;
+    }
+
+        
     }

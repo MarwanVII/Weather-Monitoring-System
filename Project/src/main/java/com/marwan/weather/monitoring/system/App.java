@@ -17,9 +17,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-//        scene = new Scene(loadFXML("primary"), 850, 500);
-//        stage.setScene(scene);
-//        stage.show();
+        scene = new Scene(loadFXML("primary"), 850, 500);
+        stage.setScene(scene);
+        stage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -32,9 +32,9 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-//        launch();
-            WeatherDataFetcher f = new WeatherDataFetcher();
-            f.fetchWeatherData("Madrid");
+        launch();
+//            WeatherDataFetcher f = new WeatherDataFetcher();
+//            f.fetchWeatherData("Madrid");
     }
 
 }
