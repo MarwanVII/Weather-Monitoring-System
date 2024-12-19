@@ -94,7 +94,14 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" prefHeight="279.0" prefWidth="320.0" />
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="279.0" prefWidth="320.0">
+               <children>
+                  <Label fx:id="weatherAlertLabel" text="Weather Alert:" textFill="#fc0000" >
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children></VBox>
             <VBox layoutX="110.0" layoutY="10.0" prefHeight="279.0" prefWidth="274.0">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0" styleClass="card">
