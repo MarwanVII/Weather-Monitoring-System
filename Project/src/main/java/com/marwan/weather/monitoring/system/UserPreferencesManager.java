@@ -7,7 +7,7 @@ package com.marwan.weather.monitoring.system;
 public class UserPreferencesManager {
     private static UserPreferencesManager instance;
     private String temperatureUnit = "°C";
-    private String windSpeedUnit = "Km\\h";
+    private String windSpeedUnit = "Km/h";
     
     private UserPreferencesManager() {}
     

@@ -37,13 +37,13 @@ public class WeatherDataFactory {
     }
     public static String getLastTemperature() {
         return lastTemperature != null
-                ? lastTemperature.getValue() + " °C"
+                ? String.valueOf(lastTemperature.getValue())
                 : "--";
     }
 
     public static String getLastWindSpeed() {
         return lastWindSpeed != null
-                ? lastWindSpeed.getValue() + " km/h"
+                ? String.valueOf(lastWindSpeed.getValue())
                 : "--";
     }
 

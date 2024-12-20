@@ -27,7 +27,7 @@ public class SecondaryController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
       String [] TemperatureMeasurmentUnit = {"°C" , "°F"}; 
-      String [] WindSpeedMeasurmentUnit = {"Km\\h" , "M\\h"};
+      String [] WindSpeedMeasurmentUnit = {"Km/h" , "M/h"};
       tempList.getItems().addAll(TemperatureMeasurmentUnit);
       windList.getItems().addAll(WindSpeedMeasurmentUnit);
       
