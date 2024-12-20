@@ -1,6 +1,8 @@
 package com.marwan.weather.monitoring.system;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -31,7 +33,6 @@ public class PrimaryController {
         if (city == null || city.isEmpty()) {
             weatherAlertLabel.setText("Please enter a city name.");
             return;
-
         }
 
         try {
@@ -44,26 +45,32 @@ public class PrimaryController {
             // After fetching, update the UI (you could pass the results directly)
             if (temperatureUnit.equals("°C")) {
                 // If Celsius, show the temperature as is
-                temperatureLabel.setText(WeatherDataFactory.getLastTemperature() + "°C");
+                BigDecimal temperature = new BigDecimal(WeatherDataFactory.getLastTemperature());
+                temperature = temperature.setScale(2, RoundingMode.HALF_UP); // Round to 2 decimal places
+                temperatureLabel.setText(temperature + "°C");
             } else {
-                // If Fahrenheit, convert from Celsius to Fahrenheit
-                double temperatureInCelsius =Double.parseDouble(WeatherDataFactory.getLastTemperature()); 
+                // If Fahrenheit, convert from Celsius to Fahrenheit and round
+                double temperatureInCelsius = Double.parseDouble(WeatherDataFactory.getLastTemperature());
                 double temperatureInFahrenheit = (temperatureInCelsius * 9 / 5) + 32;
-                temperatureLabel.setText(String.valueOf(temperatureInFahrenheit+"°F"));
+                BigDecimal temperatureFahrenheit = new BigDecimal(temperatureInFahrenheit).setScale(2, RoundingMode.HALF_UP); // Round to 2 decimal places
+                temperatureLabel.setText(temperatureFahrenheit + "°F");
             }
 
-                // Update wind speed based on the unit preference
+            // Update wind speed based on the unit preference
             if (windSpeedUnit.equals("Km/h")) {
                 // If Km/h, show the wind speed as is
-                windSpeedLabel.setText(WeatherDataFactory.getLastWindSpeed()+"Km/h");
+                BigDecimal windSpeed = new BigDecimal(WeatherDataFactory.getLastWindSpeed());
+                windSpeed = windSpeed.setScale(2, RoundingMode.HALF_UP); // Round to 2 decimal places
+                windSpeedLabel.setText(windSpeed + " Km/h");
             } else if (windSpeedUnit.equals("M/h")) {
-                // If Mph, convert from Km/h to Mph
+                // If Mph, convert from Km/h to Mph and round
                 double windSpeedInKmH = Double.parseDouble(WeatherDataFactory.getLastWindSpeed());
                 double windSpeedInMph = windSpeedInKmH * 0.621371;
-                windSpeedLabel.setText(String.valueOf(windSpeedInMph+"M/h"));
+                BigDecimal windSpeedMph = new BigDecimal(windSpeedInMph).setScale(2, RoundingMode.HALF_UP); // Round to 2 decimal places
+                windSpeedLabel.setText(windSpeedMph + " M/h");
             }
 
-// Update humidity without any conversion since it usually stays in percentage
+            // Update humidity without any conversion since it usually stays in percentage
             humidityLabel.setText(WeatherDataFactory.getLastHumidity());
         } catch (Exception e) {
             weatherAlertLabel.setText("Failed to fetch weather data.");
@@ -78,11 +85,7 @@ public class PrimaryController {
 
     @FXML
     public void initialize() {
-        //temperatureLabel.setText();
-        //windSpeedLabel.setText(preferences.getWindSpeedUnit());
-
         WeatherAlert alert = WeatherAlertFactory.createAlert("storm");
         weatherAlertLabel.setText(alert.generateAlertMessage());
-
     }
 }
