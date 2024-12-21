@@ -39,7 +39,7 @@ public class PrimaryController {
             // Fetch weather data for the entered city
             weatherDataFetcher.fetchWeatherData(city);
             UserPreferencesManager preferences = UserPreferencesManager.getInstance();
-            String temperatureUnit = preferences.getTemperatureUnit();
+            String temperatureUnit = preferences.getTemperatureUnit(); // °C or °F
             String windSpeedUnit = preferences.getWindSpeedUnit(); // Km/h or M/h
 
             // After fetching, update the UI (you could pass the results directly)

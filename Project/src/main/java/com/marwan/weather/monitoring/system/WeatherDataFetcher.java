@@ -6,15 +6,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import org.json.JSONObject;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Ahmed Saad
- */
 public class WeatherDataFetcher {
     // Method to fetch weather data from an API (OpenWeatherMap)
     private static final String API_KEY = "408a52444af6f2efe82d36c5e5da39c4"; 
@@ -30,7 +21,7 @@ public class WeatherDataFetcher {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(url))
                     .build();
-            
+
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             if (response.statusCode() == 200){
@@ -46,11 +37,6 @@ public class WeatherDataFetcher {
                 WeatherDataType temperature = WeatherDataFactory.createWeatherData("temperature", temp);
                 WeatherDataType wind = WeatherDataFactory.createWeatherData("windspeed", windSpeed);
                 WeatherDataType humid = WeatherDataFactory.createWeatherData("humidity", humidity);
-
-                // Display the data
-//                temperature.display();
-//                wind.display();
-//                humid.display();
             } else {
                 System.out.println("Failed to fetch weather data: " + response.statusCode());
             }
@@ -58,11 +44,4 @@ public class WeatherDataFetcher {
             System.out.println("Error fetching weather data: " + e.getMessage());
         }
     }
-
-
 }
-
-
-    
-    
-

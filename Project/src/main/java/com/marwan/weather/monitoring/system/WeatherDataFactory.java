@@ -1,19 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.marwan.weather.monitoring.system;
 
-/**
- *
- * @author Ahmed Saad
- */
 public class WeatherDataFactory {
-        public static final String TEMPERATURE = "temperature";
-        public static final String WINDSPEED = "windspeed";
-        public static final String HUMIDITY = "humidity";
-        
-        private static WeatherDataType lastTemperature;
+    public static final String TEMPERATURE = "temperature";
+    public static final String WINDSPEED = "windspeed";
+    public static final String HUMIDITY = "humidity";
+
+    private static WeatherDataType lastTemperature;
     private static WeatherDataType lastWindSpeed;
     private static WeatherDataType lastHumidity;
 

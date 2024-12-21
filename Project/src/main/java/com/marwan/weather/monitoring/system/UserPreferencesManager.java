@@ -1,9 +1,5 @@
 package com.marwan.weather.monitoring.system;
 
-/**
- *
- * @author mohmm
- */
 public class UserPreferencesManager {
     private static UserPreferencesManager instance;
     private String temperatureUnit = "°C";
